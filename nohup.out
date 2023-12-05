@@ -1,0 +1,95 @@
+CompileCommand: exclude com/intellij/openapi/vfs/impl/FilePartNodeRoot.trieDescend bool exclude = true
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+2023-12-05 16:40:27,342 [   3059]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Light - old: Light, new Light
+
+Info  | RdCoroutineScope          | 75:DefaultDispatcher-worker-62 | RdCoroutineHost overridden 
+2023-12-05 16:40:30,883 [   6600]   WARN - #o.j.i.maven - performImport async: Linear Import is disabled
+2023-12-05 16:40:31,065 [   6782]   WARN - #o.j.i.maven - Trying to add the same listener twice
+2023-12-05 16:40:31,076 [   6793]   WARN - #o.j.i.maven - updateAllMavenProjectsSync started, edt=false
+2023-12-05 16:40:32,559 [   8276]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Class path contains multiple SLF4J bindings.
+2023-12-05 16:40:32,560 [   8277]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/plugins/maven/lib/maven36-server.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-05 16:40:32,560 [   8277]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/lib/util-8.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-05 16:40:32,560 [   8277]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2023-12-05 16:40:32,560 [   8277]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Actual binding is of type [org.jetbrains.idea.maven.server.Maven3WrapperSl4LoggerFactory]
+2023-12-05 16:40:39,246 [  14963]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project java-029-java-projeto-final-agrix-fase-c
+2023-12-05 16:40:40,764 [  16481]   WARN - #o.j.i.maven - updateAllMavenProjectsSync finished, edt=false
+2023-12-05 16:40:40,787 [  16504]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project java-029-java-projeto-final-agrix-fase-c
+2023-12-05 16:40:43,720 [  19437]   WARN - #c.i.o.v.ExternallyAddedFilesProcessorImpl - Cannot find project config directory for non-default and non-directory based project java-029-java-projeto-final-agrix-fase-c
+2023-12-05 16:43:20,271 [ 175988]   WARN - #git4idea.annotate.GitAnnotationProvider - Git annotations are empty for file /home/lucopdev/trybe/java/projetos/java-029-java-projeto-final-agrix-fase-c/Dockerfile in revision 6a4d8c84220a8b25a6d8e12e5e77ea0df1288367
+2023-12-05 16:46:10,262 [ 345979]   WARN - #c.i.u.x.Binding - no accessors for java.time.LocalTime
+2023-12-05 16:47:32,979 [ 428696]   WARN - #o.j.i.maven - updateMavenProjectsSync started, edt=false
+2023-12-05 16:47:34,064 [ 429781]   WARN - #o.j.i.maven - updateMavenProjectsSync finished, edt=false
+2023-12-05 17:02:56,223 [1351940]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-05 17:02:59,908 [1355625]   WARN - #c.i.o.m.LanguageLevelUtil - File not found: api22.txt
+2023-12-05 17:04:05,663 [1421380]   WARN - #o.j.i.maven - updateMavenProjectsSync started, edt=false
+2023-12-05 17:04:09,307 [1425024]   WARN - #o.j.i.maven - updateMavenProjectsSync finished, edt=false
+2023-12-05 17:04:10,454 [1426171]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Class path contains multiple SLF4J bindings.
+2023-12-05 17:04:10,455 [1426172]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/lib/util-8.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-05 17:04:10,455 [1426172]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/plugins/maven/lib/maven3/lib/maven-slf4j-provider-3.9.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-05 17:04:10,455 [1426172]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2023-12-05 17:04:10,461 [1426178]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Actual binding is of type [org.slf4j.impl.JDK14LoggerFactory]
+2023-12-05 17:05:11,449 [1487166]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
