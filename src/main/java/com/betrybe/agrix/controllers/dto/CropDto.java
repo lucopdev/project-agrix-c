@@ -12,7 +12,7 @@ public record CropDto(
     Double plantedArea,
     LocalDate plantedDate,
     LocalDate harvestDate,
-
-    @JsonProperty("farmId") Integer farmId) {
+    @JsonProperty("farmId") Integer farmId
+) {
 
 }
