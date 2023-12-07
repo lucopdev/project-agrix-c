@@ -4,6 +4,7 @@ import com.betrybe.agrix.model.entities.Fertilizer;
 import com.betrybe.agrix.service.FertilizerService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,6 +38,7 @@ public class FertilizerController {
    * @return the fertilizer
    */
   @PostMapping()
+  @Secured("ROLE_ADMIN")
   @ResponseStatus(HttpStatus.CREATED)
   public Fertilizer createFertilizer(@RequestBody Fertilizer fertilizer) {
     return fertilizerService.createFertilizer(fertilizer);
@@ -48,6 +50,7 @@ public class FertilizerController {
    * @return the all fertilizers
    */
   @GetMapping()
+  @Secured("ROLE_ADMIN")
   public List<Fertilizer> getAllFertilizers() {
     return fertilizerService.getFertilizers();
   }
@@ -59,6 +62,7 @@ public class FertilizerController {
    * @return the fertilizer by id
    */
   @GetMapping("/{fertilizerId}")
+  @Secured("ROLE_ADMIN")
   public Fertilizer getFertilizerById(@PathVariable Integer fertilizerId) {
     return fertilizerService.getFertilizerById(fertilizerId);
   }

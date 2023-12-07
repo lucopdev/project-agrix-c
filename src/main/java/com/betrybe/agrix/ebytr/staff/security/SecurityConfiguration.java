@@ -1,6 +1,7 @@
 package com.betrybe.agrix.ebytr.staff.security;
 
 import com.betrybe.agrix.ebytr.staff.util.SecurityFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -16,6 +17,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+/**
+ * The type Security configuration.
+ */
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true)
@@ -23,18 +27,32 @@ public class SecurityConfiguration {
 
   private final SecurityFilter securityFilter;
 
+  /**
+   * Instantiates a new Security configuration.
+   *
+   * @param securityFilter the security filter
+   */
+  @Autowired
   public SecurityConfiguration(SecurityFilter securityFilter) {
     this.securityFilter = securityFilter;
   }
 
 
+  /**
+   * Security filter chain security filter chain.
+   *
+   * @param httpSecurity the http security
+   * @return the security filter chain
+   * @throws Exception the exception
+   */
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     return httpSecurity
         .csrf(AbstractHttpConfigurer::disable)
         .sessionManagement(
             session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        ).authorizeHttpRequests(authorize -> authorize
+        )
+        .authorizeHttpRequests(authorize -> authorize
             .requestMatchers(HttpMethod.POST, "/persons").permitAll()
             .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
             .anyRequest().authenticated()
@@ -43,12 +61,24 @@ public class SecurityConfiguration {
         .build();
   }
 
+  /**
+   * Authentication manager authentication manager.
+   *
+   * @param authenticationConfiguration the authentication configuration
+   * @return the authentication manager
+   * @throws Exception the exception
+   */
   @Bean
   public AuthenticationManager authenticationManager(
       AuthenticationConfiguration authenticationConfiguration) throws Exception {
     return authenticationConfiguration.getAuthenticationManager();
   }
 
+  /**
+   * Password encoder password encoder.
+   *
+   * @return the password encoder
+   */
   @Bean
   public PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
