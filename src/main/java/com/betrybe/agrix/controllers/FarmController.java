@@ -48,8 +48,7 @@ public class FarmController {
   @ResponseStatus(HttpStatus.CREATED)
   public FarmDto createFarm(@RequestBody FarmDto farmDto) {
     Farm farm = farmService.insertFarm(farmDto.toFarm());
-    FarmDto newFarmDto = new FarmDto(farm.getId(), farm.getName(), farm.getSize());
-    return newFarmDto;
+    return new FarmDto(farm.getId(), farm.getName(), farm.getSize());
   }
 
   /**
@@ -72,8 +71,7 @@ public class FarmController {
   @GetMapping("/{id}")
   public FarmDto getFarmById(@PathVariable Integer id) throws FarmNotFound {
     Farm farm = farmService.getFarmById(id);
-    FarmDto farmDto = new FarmDto(farm.getId(), farm.getName(), farm.getSize());
-    return farmDto;
+    return new FarmDto(farm.getId(), farm.getName(), farm.getSize());
   }
 
   /**
@@ -87,10 +85,9 @@ public class FarmController {
   @ResponseStatus(HttpStatus.CREATED)
   public CropDto insertCrop(@RequestBody Crop crop, @PathVariable Integer id) {
     Crop newCrop = cropService.createCrop(crop, id);
-    CropDto cropDto = new CropDto(newCrop.getId(), newCrop.getName(), newCrop.getPlantedArea(),
+    return new CropDto(newCrop.getId(), newCrop.getName(), newCrop.getPlantedArea(),
         newCrop.getPlantedDate(), newCrop.getHarvestDate(),
         newCrop.getFarm().getId());
-    return cropDto;
   }
 
   /**

@@ -1,6 +1,6 @@
 package com.betrybe.agrix.ebytr.staff.controller;
 
-import com.betrybe.agrix.ebytr.staff.controller.dto.PersonDto;
+import com.betrybe.agrix.ebytr.staff.controller.dto.PersonResponseDto;
 import com.betrybe.agrix.ebytr.staff.entity.Person;
 import com.betrybe.agrix.ebytr.staff.service.PersonService;
 import org.springframework.http.HttpStatus;
@@ -20,12 +20,12 @@ public class PersonController {
     this.personService = personService;
   }
 
-  @PostMapping
+  @PostMapping()
   @ResponseStatus(HttpStatus.CREATED)
-  public PersonDto createPerson(@RequestBody Person person) {
+  public PersonResponseDto createPerson(@RequestBody Person person) {
     Person personCreated = personService.create(person);
 
-    return new PersonDto(personCreated.getId(), personCreated.getRole(),
+    return new PersonResponseDto(personCreated.getId(), personCreated.getRole(),
         personCreated.getUsername());
   }
 }
