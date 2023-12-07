@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/fertilizers")
+@Secured("ROLE_ADMIN")
 public class FertilizerController {
 
   private final FertilizerService fertilizerService;
@@ -38,7 +39,6 @@ public class FertilizerController {
    * @return the fertilizer
    */
   @PostMapping()
-  @Secured("ROLE_ADMIN")
   @ResponseStatus(HttpStatus.CREATED)
   public Fertilizer createFertilizer(@RequestBody Fertilizer fertilizer) {
     return fertilizerService.createFertilizer(fertilizer);
@@ -50,7 +50,6 @@ public class FertilizerController {
    * @return the all fertilizers
    */
   @GetMapping()
-  @Secured("ROLE_ADMIN")
   public List<Fertilizer> getAllFertilizers() {
     return fertilizerService.getFertilizers();
   }
@@ -62,7 +61,6 @@ public class FertilizerController {
    * @return the fertilizer by id
    */
   @GetMapping("/{fertilizerId}")
-  @Secured("ROLE_ADMIN")
   public Fertilizer getFertilizerById(@PathVariable Integer fertilizerId) {
     return fertilizerService.getFertilizerById(fertilizerId);
   }

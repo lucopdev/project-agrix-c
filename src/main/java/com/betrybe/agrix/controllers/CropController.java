@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/crops")
-@Secured("MANAGER")
+@Secured({"ROLE_MANAGER", "ROLE_ADMIN"})
 public class CropController {
 
   private final CropService cropService;
