@@ -33,16 +33,36 @@ public class Person implements UserDetails, GrantedAuthority {
 
   private Role role;
 
+  /**
+   * Instantiates a new Person.
+   */
   public Person() {
   }
 
+  /**
+   * Instantiates a new Person.
+   *
+   * @param id       the id
+   * @param role     the role
+   * @param username the username
+   */
   public Person(Long id, Role role, String username) {
   }
 
+  /**
+   * Gets id.
+   *
+   * @return the id
+   */
   public Long getId() {
     return id;
   }
 
+  /**
+   * Sets id.
+   *
+   * @param id the id
+   */
   public void setId(Long id) {
     this.id = id;
   }
@@ -52,6 +72,11 @@ public class Person implements UserDetails, GrantedAuthority {
     return username;
   }
 
+  /**
+   * Sets username.
+   *
+   * @param username the username
+   */
   public void setUsername(String username) {
     this.username = username;
   }
@@ -85,14 +110,29 @@ public class Person implements UserDetails, GrantedAuthority {
     return password;
   }
 
+  /**
+   * Sets password.
+   *
+   * @param password the password
+   */
   public void setPassword(String password) {
     this.password = password;
   }
 
+  /**
+   * Gets role.
+   *
+   * @return the role
+   */
   public Role getRole() {
     return role;
   }
 
+  /**
+   * Sets role.
+   *
+   * @param role the role
+   */
   public void setRole(Role role) {
     this.role = role;
   }

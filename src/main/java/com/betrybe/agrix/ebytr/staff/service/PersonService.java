@@ -19,6 +19,11 @@ public class PersonService implements UserDetailsService {
 
   private final PersonRepository personRepository;
 
+  /**
+   * Instantiates a new Person service.
+   *
+   * @param personRepository the person repository
+   */
   @Autowired
   public PersonService(
       PersonRepository personRepository) {
@@ -27,6 +32,9 @@ public class PersonService implements UserDetailsService {
 
   /**
    * Returns a person for a given ID.
+   *
+   * @param id the id
+   * @return the person by id
    */
   public Person getPersonById(Long id) {
     Optional<Person> person = personRepository.findById(id);
@@ -40,6 +48,9 @@ public class PersonService implements UserDetailsService {
 
   /**
    * Returns a person for a given username.
+   *
+   * @param username the username
+   * @return the person by username
    */
   public UserDetails getPersonByUsername(String username) {
     UserDetails person = personRepository.findByUsername(username);
@@ -53,6 +64,9 @@ public class PersonService implements UserDetailsService {
 
   /**
    * Creates a new person.
+   *
+   * @param person the person
+   * @return the person
    */
   public Person create(Person person) {
     String hashedPassword = new BCryptPasswordEncoder()

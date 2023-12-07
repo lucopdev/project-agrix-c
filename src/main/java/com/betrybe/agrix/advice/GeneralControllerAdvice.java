@@ -27,6 +27,12 @@ public class GeneralControllerAdvice {
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Fazenda não encontrada!");
   }
 
+  /**
+   * Handle crop not found response entity.
+   *
+   * @param exception the exception
+   * @return the response entity
+   */
   @ExceptionHandler({
       CropNotFound.class
   })
@@ -34,6 +40,12 @@ public class GeneralControllerAdvice {
     return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Plantação não encontrada!");
   }
 
+  /**
+   * Handle fertilizer not found response entity.
+   *
+   * @param exception the exception
+   * @return the response entity
+   */
   @ExceptionHandler({
       FertilizerNotFound.class
   })
