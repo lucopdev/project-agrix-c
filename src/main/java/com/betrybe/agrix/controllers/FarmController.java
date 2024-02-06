@@ -39,10 +39,10 @@ public class FarmController {
   }
 
   /**
-   * Create farm response entity.
+   * Create farm farm dto.
    *
    * @param farmDto the farm dto
-   * @return the response entity
+   * @return the farm dto
    */
   @PostMapping()
   @ResponseStatus(HttpStatus.CREATED)

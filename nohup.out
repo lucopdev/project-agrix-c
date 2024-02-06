@@ -1127,3 +1127,529 @@ Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.dataformat.ya
 2023-12-06 22:04:15,669 [10988858] SEVERE - com.jediterm.terminal.model.TerminalTextBuffer - Attempt to get line out of bounds: 14 >= 14
 2023-12-06 22:04:39,238 [11012427]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
 2023-12-06 22:05:32,802 [11065991]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-06 22:11:22,704 [11415893] SEVERE - #c.i.o.e.i.EditorFactoryImpl - Editor EditorImpl[null] hasn't been released:
+com.intellij.openapi.util.TraceableDisposable$DisposalException: Editor EditorImpl[null] hasn't been released:
+	at com.intellij.openapi.util.TraceableDisposable.throwDisposalError(TraceableDisposable.java:44)
+	at com.intellij.openapi.editor.impl.EditorImpl.throwDisposalError(EditorImpl.java:1020)
+	at com.intellij.openapi.editor.impl.EditorFactoryImpl.throwNotReleasedError(EditorFactoryImpl.java:116)
+	at com.intellij.openapi.editor.impl.EditorFactoryImpl.lambda$validateEditorsAreReleased$0(EditorFactoryImpl.java:104)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at com.intellij.openapi.editor.impl.EditorFactoryImpl.validateEditorsAreReleased(EditorFactoryImpl.java:101)
+	at com.intellij.openapi.editor.impl.EditorFactoryImpl$1.lambda$projectClosed$0(EditorFactoryImpl.java:64)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:193)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:861)
+	at com.intellij.openapi.application.impl.ApplicationImpl$4.run(ApplicationImpl.java:478)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:79)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:121)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:792)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:739)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:733)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:761)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:690)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$10(IdeEventQueue.kt:593)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithoutImplicitRead(ApplicationImpl.java:1485)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:593)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:67)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:369)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:368)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:787)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:368)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:363)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:997)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:113)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:997)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$7(IdeEventQueue.kt:363)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:861)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:405)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:379)
+	at com.intellij.openapi.progress.impl.PlatformTaskSupportKt.pumpEventsForHierarchy(PlatformTaskSupport.kt:387)
+	at com.intellij.ide.ShutdownKt$cancelAndJoinBlocking$1.invoke(shutdown.kt:33)
+	at com.intellij.ide.ShutdownKt$cancelAndJoinBlocking$1.invoke(shutdown.kt:28)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:79)
+	at com.intellij.ide.ShutdownKt.cancelAndJoinBlocking(shutdown.kt:28)
+	at com.intellij.openapi.application.impl.ApplicationImpl.disposeContainer(ApplicationImpl.java:218)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$doExit$5(ApplicationImpl.java:660)
+	at com.intellij.platform.diagnostic.telemetry.helpers.TraceKt.computeWithSpanIgnoreThrows(trace.kt:73)
+	at com.intellij.platform.diagnostic.telemetry.helpers.TraceUtil.computeWithSpanThrows(TraceUtil.java:18)
+	at com.intellij.openapi.application.impl.ApplicationImpl.doExit(ApplicationImpl.java:646)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:595)
+	at com.intellij.openapi.application.impl.ApplicationImpl.exit(ApplicationImpl.java:584)
+	at com.intellij.openapi.application.ex.ApplicationEx.exit(ApplicationEx.java:77)
+	at com.intellij.openapi.wm.impl.CloseProjectWindowHelper.quitApp(CloseProjectWindowHelper.kt:67)
+	at com.intellij.openapi.wm.impl.CloseProjectWindowHelper.windowClosing(CloseProjectWindowHelper.kt:47)
+	at com.intellij.openapi.wm.impl.ProjectFrameHelper.windowClosing(ProjectFrameHelper.kt:439)
+	at com.intellij.openapi.wm.impl.WindowCloseListener.windowClosing(ProjectFrameHelper.kt:459)
+	at java.desktop/java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:357)
+	at java.desktop/java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:357)
+	at java.desktop/java.awt.AWTEventMulticaster.windowClosing(AWTEventMulticaster.java:357)
+	at java.desktop/java.awt.Window.processWindowEvent(Window.java:2113)
+	at java.desktop/javax.swing.JFrame.processWindowEvent(JFrame.java:298)
+	at java.desktop/java.awt.Window.processEvent(Window.java:2072)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5027)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2808)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomHeader.close(CustomHeader.kt:244)
+	at com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomHeader$myCloseAction$1.invoke(CustomHeader.kt:241)
+	at com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomHeader$myCloseAction$1.invoke(CustomHeader.kt:241)
+	at com.intellij.openapi.wm.impl.customFrameDecorations.header.CustomHeader$CustomFrameAction.actionPerformed(CustomHeader.kt:251)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2313)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6657)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3385)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6422)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5027)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4954)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4581)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4522)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2808)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4855)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:794)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:739)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:733)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:766)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:764)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:763)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:690)
+	at com.intellij.ide.IdeEventQueue.dispatchMouseEvent(IdeEventQueue.kt:638)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:592)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:67)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:369)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:368)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:787)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:368)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:363)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:997)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:113)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:997)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$7(IdeEventQueue.kt:363)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:861)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:405)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2023-12-06 22:11:22,709 [11415898] SEVERE - #c.i.o.e.i.EditorFactoryImpl - IntelliJ IDEA 2023.2.4  Build #IC-232.10203.10
+2023-12-06 22:11:22,710 [11415899] SEVERE - #c.i.o.e.i.EditorFactoryImpl - JDK: 17.0.8.1; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2023-12-06 22:11:22,710 [11415899] SEVERE - #c.i.o.e.i.EditorFactoryImpl - OS: Linux
+CompileCommand: exclude com/intellij/openapi/vfs/impl/FilePartNodeRoot.trieDescend bool exclude = true
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+2023-12-07 13:49:08,952 [   5444]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Light - old: Light, new Light
+
+2023-12-07 13:49:10,714 [   7206]   WARN - #o.j.i.maven - updateAllMavenProjectsSync started, edt=false
+2023-12-07 13:49:11,071 [   7563]   WARN - #o.j.i.maven - updateAllMavenProjectsSync finished, edt=false
+Info  | RdCoroutineScope          | 16:DefaultDispatcher-worker-5 | RdCoroutineHost overridden 
+2023-12-07 13:49:15,425 [  11917]   WARN - #c.i.o.a.i.ActionUpdater - 526 ms to grab EDT for ToolWindowHeader$2#update@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2023-12-07 13:49:21,341 [  17833]   WARN - #c.i.o.a.i.ActionUpdater - 1859 ms to call on BGT FileTemplateSeparator#getChildren@ProjectViewPopup(preload-bgt) (com.intellij.ide.fileTemplates.actions.FileTemplateSeparator)
+2023-12-07 13:49:23,101 [  19593]   WARN - #c.i.o.a.i.ActionUpdater - 509 ms to grab EDT for LiveEditIssueNotificationAction#update@EditorInspectionsToolbar (com.android.tools.idea.editors.liveedit.ui.LiveEditIssueNotificationAction)
+2023-12-07 13:49:29,797 [  26289]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Class path contains multiple SLF4J bindings.
+2023-12-07 13:49:29,802 [  26294]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/plugins/maven/lib/maven36-server.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-07 13:49:29,805 [  26297]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/lib/util-8.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-07 13:49:29,807 [  26299]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2023-12-07 13:49:29,852 [  26344]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Actual binding is of type [org.jetbrains.idea.maven.server.Maven3WrapperSl4LoggerFactory]
+2023-12-07 13:49:38,888 [  35380]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-07 13:49:42,243 [  38735]   WARN - #c.i.o.m.LanguageLevelUtil - File not found: api22.txt
+2023-12-07 14:10:11,391 [1267883]   WARN - #c.i.u.x.Binding - no accessors for java.time.LocalTime
+2023-12-07 14:52:01,101 [3777593]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore configurable with duplicated id: device.file.explorer
+2023-12-07 14:52:01,249 [3777741]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting
+2023-12-07 14:52:16,697 [3793189]   WARN - #c.i.o.a.i.ActionUpdater - 323 ms to grab EDT for AbstractSchemeActions$CopyAction#update@SchemesPanelToolbar (com.intellij.application.options.schemes.AbstractSchemeActions$CopyAction)
+CompileCommand: exclude com/intellij/openapi/vfs/impl/FilePartNodeRoot.trieDescend bool exclude = true
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+Do not use URL connection as JarURLConnection
+2023-12-08 18:57:08,268 [   5137]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Light - old: Light, new Light
+
+2023-12-08 18:57:10,354 [   7223]   WARN - #o.j.i.maven - updateAllMavenProjectsSync started, edt=false
+2023-12-08 18:57:10,774 [   7643]   WARN - #o.j.i.maven - updateAllMavenProjectsSync finished, edt=false
+Info  | RdCoroutineScope          | 57:DefaultDispatcher-worker-40 | RdCoroutineHost overridden 
+2023-12-08 18:57:15,166 [  12035]   WARN - #c.i.o.a.i.ActionUpdater - 483 ms to grab EDT for ToolWindowHeader$2#update@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2023-12-08 18:57:18,098 [  14967]   WARN - #c.i.o.a.i.ActionUpdater - 867 ms to grab EDT for ToolWindowHeader$2#update@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2023-12-08 18:57:18,599 [  15468]   WARN - #c.i.o.a.i.ActionUpdater - 328 ms to grab EDT for ExpandAllAction#update@ToolwindowTitle (com.intellij.ide.actions.ExpandAllAction)
+2023-12-08 18:57:22,895 [  19764]   WARN - #c.i.o.a.i.ActionUpdater - 1588 ms to grab EDT for LiveEditIssueNotificationAction#update@EditorInspectionsToolbar (com.android.tools.idea.editors.liveedit.ui.LiveEditIssueNotificationAction)
+2023-12-08 18:57:26,949 [  23818]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Class path contains multiple SLF4J bindings.
+2023-12-08 18:57:26,954 [  23823]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/plugins/maven/lib/maven36-server.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-08 18:57:26,954 [  23823]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Found binding in [jar:file:/home/lucopdev/idea-IC-232.10203.10/lib/util-8.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2023-12-08 18:57:26,954 [  23823]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2023-12-08 18:57:26,955 [  23824]   WARN - #c.i.e.r.RemoteProcessSupport - SLF4J: Actual binding is of type [org.jetbrains.idea.maven.server.Maven3WrapperSl4LoggerFactory]
+2023-12-08 18:57:38,581 [  35450]   WARN - #c.i.o.a.i.ActionUpdater - 1111 ms to call on BGT RunContextAction#update@EditorPopup(preload-bgt) (com.intellij.execution.actions.RunContextAction)
+2023-12-08 18:57:40,749 [  37618]   WARN - #c.i.o.m.LanguageLevelUtil - File not found: api22.txt
+2023-12-08 18:57:41,505 [  38374]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-08 18:58:20,276 [  77145]   WARN - #kotlinx.coroutines.CoroutineScope - Cannot wait for a ready scroll pane, scroll now
+2023-12-08 18:58:47,888 [ 104757]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-08 19:00:29,918 [ 206787]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-08 19:00:57,687 [ 234556]   WARN - #c.i.d.r.d.DockerComposeDeployer - Cannot create class com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser (classloader=PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active))
+com.intellij.diagnostic.PluginException: Cannot create class com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser (classloader=PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active))
+	at com.intellij.serviceContainer.ComponentManagerImpl.doInstantiateClass(ComponentManagerImpl.kt:1003)
+	at com.intellij.serviceContainer.ComponentManagerImpl.instantiateClass(ComponentManagerImpl.kt:954)
+	at com.intellij.serviceContainer.ComponentManagerImpl.createLightService(ComponentManagerImpl.kt:933)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getOrCreateLightService(ComponentManagerImpl.kt:736)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doGetService(ComponentManagerImpl.kt:688)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getService(ComponentManagerImpl.kt:630)
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser$Companion.getInstance(PureDockerComposeConfigurationParser.kt:160)
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser.getInstance(PureDockerComposeConfigurationParser.kt)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeConfigurationParserUtil.uncachedParserForUi(DockerComposeConfigurationParserUtil.java:28)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider$myCachingParser$2.invoke(DockerComposeFileConfigurationProvider.kt:38)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider$myCachingParser$2.invoke(DockerComposeFileConfigurationProvider.kt:37)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getMyCachingParser(DockerComposeFileConfigurationProvider.kt:37)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getConfigFor(DockerComposeFileConfigurationProvider.kt:57)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getConfigFor$default(DockerComposeFileConfigurationProvider.kt:45)
+	at com.intellij.docker.runtimes.deploy.DockerComposeDeployerKt.computeComposeProjectName(DockerComposeDeployer.kt:231)
+	at com.intellij.docker.runtimes.deploy.DockerComposeDeployerKt.computeComposeProjectName(DockerComposeDeployer.kt:218)
+	at com.intellij.docker.DockerRuntimesManager.deploy(DockerRuntimesManager.kt:338)
+	at com.intellij.docker.runtimes.DockerRuntimeKt.deploy(DockerRuntime.kt:186)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState$execute$1.invoke(DockerDeployToServerStateProvider.kt:68)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState$execute$1.invoke(DockerDeployToServerStateProvider.kt:68)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState.execute$lambda$0(DockerDeployToServerStateProvider.kt:68)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at com.intellij.docker.runtimes.DockerServerRuntime$connectIfNeeded$1.invokeSuspend(DockerRuntime.kt:294)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/dataformat/yaml/YAMLFactory
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser.<init>(PureDockerComposeConfigurationParser.kt:38)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doInstantiateClass(ComponentManagerImpl.kt:962)
+	... 31 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.dataformat.yaml.YAMLFactory PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active)
+	at com.intellij.ide.plugins.cl.PluginClassLoader.loadClass(PluginClassLoader.kt:156)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 33 more
+2023-12-08 19:00:57,703 [ 234572]   WARN - #c.i.d.r.d.DockerComposeDeployer - Cannot create class com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser (classloader=PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active))
+com.intellij.diagnostic.PluginException: Cannot create class com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser (classloader=PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active))
+	at com.intellij.serviceContainer.ComponentManagerImpl.doInstantiateClass(ComponentManagerImpl.kt:1003)
+	at com.intellij.serviceContainer.ComponentManagerImpl.instantiateClass(ComponentManagerImpl.kt:954)
+	at com.intellij.serviceContainer.ComponentManagerImpl.createLightService(ComponentManagerImpl.kt:933)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getOrCreateLightService(ComponentManagerImpl.kt:736)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doGetService(ComponentManagerImpl.kt:688)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getService(ComponentManagerImpl.kt:630)
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser$Companion.getInstance(PureDockerComposeConfigurationParser.kt:160)
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser.getInstance(PureDockerComposeConfigurationParser.kt)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeConfigurationParserUtil.uncachedParserForUi(DockerComposeConfigurationParserUtil.java:28)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider$myCachingParser$2.invoke(DockerComposeFileConfigurationProvider.kt:38)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider$myCachingParser$2.invoke(DockerComposeFileConfigurationProvider.kt:37)
+	at kotlin.SynchronizedLazyImpl.getValue(LazyJVM.kt:74)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getMyCachingParser(DockerComposeFileConfigurationProvider.kt:37)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getConfigFor(DockerComposeFileConfigurationProvider.kt:57)
+	at com.intellij.docker.compose.configuration.beans.parse.DockerComposeFileConfigurationProvider.getConfigFor$default(DockerComposeFileConfigurationProvider.kt:45)
+	at com.intellij.docker.runtimes.deploy.DockerComposeDeployerKt.computeComposeProjectName(DockerComposeDeployer.kt:231)
+	at com.intellij.docker.runtimes.deploy.DockerComposeDeployerKt.access$computeComposeProjectName(DockerComposeDeployer.kt:1)
+	at com.intellij.docker.runtimes.deploy.DockerComposeDeployer.<init>(DockerComposeDeployer.kt:62)
+	at com.intellij.docker.DockerRuntimesManager.deploy(DockerRuntimesManager.kt:347)
+	at com.intellij.docker.runtimes.DockerRuntimeKt.deploy(DockerRuntime.kt:186)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState$execute$1.invoke(DockerDeployToServerStateProvider.kt:68)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState$execute$1.invoke(DockerDeployToServerStateProvider.kt:68)
+	at com.intellij.docker.runtimes.deploy.DockerDeployToServerStateProvider$DockerState.execute$lambda$0(DockerDeployToServerStateProvider.kt:68)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.complete(CompletableFuture.java:2147)
+	at com.intellij.docker.runtimes.DockerServerRuntime$connectIfNeeded$1.invokeSuspend(DockerRuntime.kt:294)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/dataformat/yaml/YAMLFactory
+	at com.intellij.docker.compose.configuration.beans.parse.PureDockerComposeConfigurationParser.<init>(PureDockerComposeConfigurationParser.kt:38)
+	at com.intellij.serviceContainer.ComponentManagerImpl.doInstantiateClass(ComponentManagerImpl.kt:962)
+	... 32 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.dataformat.yaml.YAMLFactory PluginClassLoader(plugin=PluginDescriptor(name=Docker, id=Docker, descriptorPath=plugin.xml, path=~/.local/share/JetBrains/IdeaIC2023.2/clouds-docker-impl, version=232.10203.2, package=com.intellij.docker, isBundled=false), packagePrefix=com.intellij.docker., state=active)
+	... 34 more
+2023-12-08 19:00:57,848 [ 234717]   WARN - #o.j.p.t.AbstractTerminalRunner - Cannot get terminal size from component, defaulting to 80x24
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: component should be showing
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:674)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:662)
+	at java.base/java.util.concurrent.CompletableFuture.thenApply(CompletableFuture.java:2168)
+	at org.jetbrains.plugins.terminal.AbstractTerminalRunner.awaitTermSize(AbstractTerminalRunner.java:242)
+	at org.jetbrains.plugins.terminal.AbstractTerminalRunner.lambda$openSessionInDirectory$4(AbstractTerminalRunner.java:205)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:208)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:21)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:190)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:861)
+	at com.intellij.openapi.application.impl.ApplicationImpl$4.run(ApplicationImpl.java:478)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:79)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:121)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:41)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:792)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:739)
+	at java.desktop/java.awt.EventQueue$3.run(EventQueue.java:733)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:761)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.kt:690)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent$lambda$10(IdeEventQueue.kt:593)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWithoutImplicitRead(ApplicationImpl.java:1485)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.kt:593)
+	at com.intellij.ide.IdeEventQueue.access$_dispatchEvent(IdeEventQueue.kt:67)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:369)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1$1.compute(IdeEventQueue.kt:368)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:787)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:368)
+	at com.intellij.ide.IdeEventQueue$dispatchEvent$processEventRunnable$1$1.invoke(IdeEventQueue.kt:363)
+	at com.intellij.ide.IdeEventQueueKt.performActivity$lambda$1(IdeEventQueue.kt:997)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:105)
+	at com.intellij.ide.IdeEventQueueKt.performActivity(IdeEventQueue.kt:997)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent$lambda$7(IdeEventQueue.kt:363)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:861)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:405)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+Caused by: java.lang.IllegalStateException: component should be showing
+	at org.jetbrains.plugins.terminal.exp.TerminalUiUtils.awaitComponentLayout(TerminalUiUtils.kt:84)
+	... 39 more
+2023-12-08 19:14:10,685 [1027554]   WARN - com.github.benmanes.caffeine.cache.BoundedLocalCache - Exception thrown when submitting maintenance task
+com.intellij.openapi.progress.ProcessCanceledException
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.throwIfCanceled(AbstractProgressIndicatorBase.java:158)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.checkCanceled(AbstractProgressIndicatorBase.java:148)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorExBase.checkCanceled(AbstractProgressIndicatorExBase.java:89)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.doCheckCanceled(CoreProgressManager.java:141)
+	at com.intellij.openapi.progress.ProgressManager.checkCanceled(ProgressManager.java:231)
+	at com.intellij.psi.impl.smartPointers.SmartPsiElementPointerImpl.pointsToTheSameElementAs(SmartPsiElementPointerImpl.java:272)
+	at com.intellij.psi.impl.smartPointers.SmartPsiElementPointerImpl.equals(SmartPsiElementPointerImpl.java:58)
+	at com.intellij.psi.impl.ElementBase$ElementIconRequest.equals(ElementBase.java:183)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfPresent(ConcurrentHashMap.java:1827)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntry(BoundedLocalCache.java:1030)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.evictFromMain(BoundedLocalCache.java:866)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.evictEntries(BoundedLocalCache.java:708)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.maintenance(BoundedLocalCache.java:1720)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.performCleanUp(BoundedLocalCache.java:1658)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache$PerformCleanupTask.run(BoundedLocalCache.java:3880)
+	at com.intellij.util.concurrency.SameThreadExecutor.execute(SameThreadExecutor.java:15)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.scheduleDrainBuffers(BoundedLocalCache.java:1631)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.scheduleAfterWrite(BoundedLocalCache.java:1597)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.afterWrite(BoundedLocalCache.java:1529)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.doComputeIfAbsent(BoundedLocalCache.java:2756)
+	at com.github.benmanes.caffeine.cache.BoundedLocalCache.computeIfAbsent(BoundedLocalCache.java:2666)
+	at com.github.benmanes.caffeine.cache.LocalCache.computeIfAbsent(LocalCache.java:112)
+	at com.github.benmanes.caffeine.cache.LocalManualCache.get(LocalManualCache.java:62)
+	at com.intellij.ui.IconDeferrerImpl.defer(IconDeferrerImpl.kt:75)
+	at com.intellij.ui.icons.CoreIconManager.createDeferredIcon(CoreIconManager.kt:117)
+	at com.intellij.psi.impl.ElementBase.computeIcon(ElementBase.java:85)
+	at com.intellij.psi.impl.ElementBase.getIcon(ElementBase.java:62)
+	at com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.lambda$doUpdate$1(AbstractPsiBasedNode.java:178)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:895)
+	at com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.doUpdate(AbstractPsiBasedNode.java:166)
+	at com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.lambda$update$0(AbstractPsiBasedNode.java:162)
+	at com.intellij.util.AstLoadingFilter.lambda$toComputable$2(AstLoadingFilter.java:172)
+	at com.intellij.util.AstLoadingFilter.disallowTreeLoading(AstLoadingFilter.java:130)
+	at com.intellij.util.AstLoadingFilter.disallowTreeLoading(AstLoadingFilter.java:119)
+	at com.intellij.util.AstLoadingFilter.disallowTreeLoading(AstLoadingFilter.java:109)
+	at com.intellij.ide.projectView.impl.nodes.AbstractPsiBasedNode.update(AbstractPsiBasedNode.java:162)
+	at com.intellij.ide.util.treeView.PresentableNodeDescriptor.getUpdatedPresentation(PresentableNodeDescriptor.java:88)
+	at com.intellij.ide.util.treeView.PresentableNodeDescriptor.update(PresentableNodeDescriptor.java:32)
+	at com.intellij.ui.tree.StructureTreeModel$Node.update(StructureTreeModel.java:486)
+	at com.intellij.ui.tree.StructureTreeModel.invalidateInternal(StructureTreeModel.java:244)
+	at com.intellij.ui.tree.StructureTreeModel.lambda$invalidate$5(StructureTreeModel.java:208)
+	at com.intellij.ui.tree.StructureTreeModel.lambda$onValidThread$2(StructureTreeModel.java:143)
+	at com.intellij.ui.tree.StructureTreeModel.lambda$onValidThread$1(StructureTreeModel.java:121)
+	at com.intellij.util.concurrency.Invoker$Task.run(Invoker.java:306)
+	at com.intellij.openapi.application.impl.ApplicationImpl.tryRunReadAction(ApplicationImpl.java:1133)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.lambda$runInReadActionWithWriteActionPriority$0(ProgressIndicatorUtils.java:76)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtilService.runActionAndCancelBeforeWrite(ProgressIndicatorUtilService.java:63)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.runActionAndCancelBeforeWrite(ProgressIndicatorUtils.java:133)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.lambda$runWithWriteActionPriority$1(ProgressIndicatorUtils.java:114)
+	at com.intellij.openapi.progress.ProgressManager.lambda$runProcess$0(ProgressManager.java:71)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:186)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$13(CoreProgressManager.java:604)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:679)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:635)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:603)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:61)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:173)
+	at com.intellij.openapi.progress.ProgressManager.runProcess(ProgressManager.java:71)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.runWithWriteActionPriority(ProgressIndicatorUtils.java:111)
+	at com.intellij.openapi.progress.util.ProgressIndicatorUtils.runInReadActionWithWriteActionPriority(ProgressIndicatorUtils.java:76)
+	at com.intellij.util.concurrency.Invoker.invokeSafely(Invoker.java:188)
+	at com.intellij.util.concurrency.Invoker.lambda$offerSafely$0(Invoker.java:165)
+	at com.intellij.util.concurrency.Invoker$Background.lambda$offer$0(Invoker.java:433)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at com.intellij.util.concurrency.ContextCallable.call(ContextCallable.java:29)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:249)
+	at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:31)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.executeFirstTaskAndHelpQueue(BoundedTaskExecutor.java:227)
+	at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+	at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:215)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-08 19:14:14,442 [1031311]   WARN - org.apache.velocity.deprecation - configuration key 'resource.loader' has been deprecated in favor of 'resource.loaders'
+2023-12-08 19:14:14,443 [1031312]   WARN - org.apache.velocity.deprecation - configuration key 'includes.resource.loader.class' has been deprecated in favor of 'resource.loader.includes.class'
+2023-12-08 19:16:45,138 [1182007]   WARN - #c.i.u.x.Binding - no accessors for java.time.LocalTime
+2023-12-08 19:16:50,310 [1187179]   WARN - #o.j.k.i.s.r.KotlinCompilerReferenceIndexStorage - kotlin-data-container is not found
+2023-12-08 19:26:35,242 [1772111]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore configurable with duplicated id: device.file.explorer
+2023-12-08 19:26:35,382 [1772251]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting
+2023-12-08 19:26:37,689 [1774558]   WARN - #c.i.o.a.i.ActionUpdater - 375 ms to grab EDT for BackAction#update@SettingsHistory (com.intellij.ide.actions.BackAction)
+2023-12-08 19:26:40,751 [1777620]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore configurable with duplicated id: device.file.explorer
+2023-12-08 19:26:40,759 [1777628]   WARN - #c.i.o.o.e.ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting

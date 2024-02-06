@@ -44,6 +44,7 @@ public class AuthenticationController {
    * @param authenticationDto the authentication dto
    * @return the response entity
    */
+  
   @PostMapping("/login")
   public ResponseEntity<ResponseTokenDto<String>> login(
       @RequestBody AuthenticationDto authenticationDto) {

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TokenService {
 
-  private Algorithm algorithm;
+  private final Algorithm algorithm;
 
   /**
    * Instantiates a new Token service.
@@ -35,7 +35,7 @@ public class TokenService {
   public String generateToken(Person person) {
 
     return JWT.create()
-        .withIssuer("senhaLucas")
+        .withIssuer("agrixLucas")
         .withSubject(person.getUsername())
         .withExpiresAt(generateExpirationDate())
         .sign(algorithm);
@@ -55,7 +55,7 @@ public class TokenService {
    */
   public String validateToken(String token) {
     return JWT.require(algorithm)
-        .withIssuer("senhaLucas")
+        .withIssuer("agrixLucas")
         .build()
         .verify(token)
         .getSubject();
